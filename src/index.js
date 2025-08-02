@@ -1,5 +1,6 @@
 import prompt from "prompt";
 import createQRCode from "./services/qrcode/create.js";
+import createPassword from "./services/password/create.js";
 
 import promptSchema from "./prompts/prompt-main.js";
 
@@ -10,7 +11,7 @@ async function main() {
     }
 
     if (result.select == 2) {
-      console.log("Escolheu o PASSWORD!");
+      await createPassword();
     }
   });
 
