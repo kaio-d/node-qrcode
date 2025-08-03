@@ -1,6 +1,7 @@
 import prompt from "prompt";
 import createQRCode from "./services/qrcode/create.js";
 import createPassword from "./services/password/create.js";
+import createGas from "./services/gas/create.js";
 
 import promptSchema from "./prompts/prompt-main.js";
 
@@ -12,6 +13,10 @@ async function main() {
 
     if (result.select == 2) {
       await createPassword();
+    }
+
+    if (result.select == 3) {
+      await createGas();
     }
   });
 
